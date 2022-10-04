@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <form align="right" name="form1" method="post" action="singup.html">
+        <label>
+        <input name="submit2" type="submit" id="submit2" value="log out">
+        </label>
+      </form>
+    <meta charset="UTF-8">
+    <br><br>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+     
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+<style>
+    .dark{
+        background-color: #222;
+        color: #e6e6e6;
+    }
+    body{
+        padding:10% 3% 10% 3%;
+        text-align:center;
+        }
+        img{
+            height:140px;
+                width:140px;
+        }
+        h1{
+        color: #32a852;
+        }
+        .mode {
+            float:right;
+        }
+        .change {
+            cursor: pointer;
+            border: 1px solid #555;
+            border-radius: 40%;
+            width: 20px;
+            text-align: center;
+            padding: 5px;
+            margin-left: 8px;
+        }
+      #out{
+        background-color:rgb(182, 249, 255);
+        }
+       
+        #content_container {
+            background-color: antiquewhite;
+            width: 40%;
+            height:55%;
+            margin:auto;
+            padding:auto;
+            font-size:1.5rem;
+            font-family:Britannic;
+            display: center;
+        justify-content: center;
+        align-items: center;
+        float: c
+        }
+    </style>
+<body>
+    <div class="mode">
+        Dark mode:            
+        <span class="change">OFF</span>
+    </div>
+     
+    </div>
+     
+    <script>
+        $( ".change" ).on("click", function() {
+            if( $( "body" ).hasClass( "dark" )) {
+                $( "body" ).removeClass( "dark" );
+                $( ".change" ).text( "OFF" );
+            } else {
+                $( "body" ).addClass( "dark" );
+                $( ".change" ).text( "ON" );
+            }
+        });
+    </script>
+</body>
+ 
+</html>
+    
+<title>Addition</title>
+<div>
+<div>
+    <div id="content_container">
+        <p align="center">
+            
+<h1 style="color:red"><p align ="center">Addition</p></h1>
+
+<form name="f1" action="https://sheetdb.io/api/v1/1hdk3w60fcx02" method="POST" id="sheetdb-form">
+    enter first number: <input name="data[first_number]" id="data[first_number]">
+    <br><br>
+    enter second number: <input name="data[second_number]" id="data[second_number]">
+    <br><br>
+    <p align="center"><button type="submit" onclick="add();">Add</button>       
+                            <button onClick="window.location.href=window.location.href">reset</button>
+    <br><br>
+    sum: <input name="data[sum]" id="data[sum]">
+    <br><br>
+  </form>
+  <script>
+    var form = document.getElementById('sheetdb-form');
+    function add(){
+      var x=parseInt(document.getElementById("data[first_number]").value);
+      var y=parseInt(document.getElementById("data[second_number]").value);
+      var z=document.getElementById("data[sum]")
+      z.value=x+y;
+    }
+  var form = document.getElementById('sheetdb-form');
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method : "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+    }).then(
+        response => response.json()
+    ).then((html) => {
+      // you can put any JS code here
+      alert('Additon was Successfully completed')
+    });
+  });
+</script>
+
+</div>
+</p>
+</div>
+</div>
+</body>

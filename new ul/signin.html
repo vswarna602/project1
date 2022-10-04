@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <br><br>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+     
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+<style>
+    .dark{
+        background-color: #222;
+        color: #e6e6e6;
+    }
+    body{
+        padding:10% 3% 10% 3%;
+        text-align:center;
+        }
+        img{
+            height:140px;
+                width:140px;
+        }
+        h1{
+        color: #32a852;
+        }
+        .mode {
+            float:right;
+        }
+        .change {
+            cursor: pointer;
+            border: 1px solid #555;
+            border-radius: 40%;
+            width: 20px;
+            text-align: center;
+            padding: 5px;
+            margin-left: 8px;
+        }
+      #out{
+        background-color:rgb(182, 249, 255);
+        }
+       
+        #content_container {
+            background-color: antiquewhite;
+            width: 40%;
+            height:55%;
+            margin:auto;
+            padding:auto;
+            font-size:1.5rem;
+            font-family:Britannic;
+            display: center;
+        justify-content: center;
+        align-items: center;
+        float: c
+        }
+    </style>
+<body>
+    <div class="mode">
+        Dark mode:            
+        <span class="change">OFF</span>
+    </div>
+     
+    </div>
+     
+    <script>
+        $( ".change" ).on("click", function() {
+            if( $( "body" ).hasClass( "dark" )) {
+                $( "body" ).removeClass( "dark" );
+                $( ".change" ).text( "OFF" );
+            } else {
+                $( "body" ).addClass( "dark" );
+                $( ".change" ).text( "ON" );
+            }
+        });
+    </script>
+</body>
+ 
+</html>
+    
+<title>LogIn</title>
+<div>
+<div>
+    <div id="content_container">
+        <p align="center">
+            
+<h1 style="color:red"><p align ="center">LogIn Here</p></h1>
+
+<form name="f1" action="https://sheetdb.io/api/v1/1hdk3w60fcx02" method="POST" id="sheetdb-form">
+    enter your name: <input name="data[name]" id="data[name]">
+    <br><br>
+    enter email address: <input name="data[email]" id="data[email]">
+    <br><br>
+    password: <input name="data[password]" id="data[password]">
+    <p align="center"><button type="submit" onclick="add();">login</button>       
+    <br><br>
+    <br><br>
+  </form>
+  <script>
+    var form = document.getElementById('sheetdb-form');
+    function login(){
+      var x=parseInt(document.getElementById("data[name]").value);
+      var y=parseInt(document.getElementById("data[email]").value);
+      var z=document.getElementById("data[password]").value
+        }
+  var form = document.getElementById('sheetdb-form');
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method : "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+    }).then(
+        response => response.json()
+    ).then((html) => {
+      // you can put any JS code here
+      window.location.href="add.html"
+    });
+  });
+</script>
+</div>
+</p>
+</div>
+</div>
+</body>

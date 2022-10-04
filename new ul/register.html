@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+		$( ".change" ).on("click", function() {
+			if( $( "body" ).hasClass( "dark" )) {
+				$( "body" ).removeClass( "dark" );
+				$( ".change" ).text( "OFF" );
+			} else {
+				$( "body" ).addClass( "dark" );
+				$( ".change" ).text( "ON" );
+			}
+		});
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	
+	
+	<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+	</script>
+	
+	<style>
+        
+		body{
+		padding:10% 3% 10% 3%;
+		text-align:center;
+		}
+		img{
+			height:140px;
+				width:140px;
+		}
+		h1{
+		color: #32a852;
+		}
+		.mode {
+			float:right;
+		}
+		.change {
+			cursor: pointer;
+			border: 1px solid #555;
+			border-radius: 40%;
+			width: 20px;
+			text-align: center;
+			padding: 5px;
+			margin-left: 8px;
+		}
+		.dark{
+			background-color: #222;
+			color: #e6e6e6;
+		}
+        html, body {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(232, 243, 239);
+            height: 100vh;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        * {
+            margin: auto;
+            padding: auto;
+            box-sizing: border-box;
+            border: auto;
+            outline: none;
+        }
+        #content_container {
+            width: 30%;
+            height: 70%;
+        }
+        
+        #form_container {
+            width: 900px;
+            height: 500px;
+            background-color: rgb(229, 255, 255);
+            position: absolute;
+            top: 150px;
+            left: 300px;
+            border-radius: 20px;
+            
+        }
+        
+        #form_header_container {
+            width: 100%;
+            height: 10%;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: left;
+        
+            padding: 10px;
+            padding-bottom: 50px;
+            padding-top: 10px;
+        
+            border-bottom: 3px solid transparent;
+            border-image: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF) 3rem;
+            background: rgba(226, 157, 251, 0.484);
+            
+        }
+        
+        #form_header {
+            display: inline-block;
+            font-size: 50px;
+            font-family: chiller;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;  
+        }
+        
+        #form_content_container {
+            width: 100%;
+            height: 90%;
+        
+            float: left;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            padding-top: 30px;
+        }
+        
+        #form_content_inner_container {
+            width: 75%;
+            height: 100%;
+        
+            float: left;
+        
+        }
+        
+        input {        
+            width: 100%;
+            height: 40px;
+        
+            padding-left: 10px;
+            margin-bottom: 20px;
+        
+            background: rgb(3, 249, 192);
+            font-family: Montserrat;
+            font-weight: 500;
+            color: rgb(3, 0, 0);
+            font-size: 1.5rem;
+        
+        }
+        
+        #button_container {
+                   font-family: 'Comfortaa', cursive;
+                font-size: 2rem;
+                font-weight: 700;
+                padding: 8px 0px;
+                color: #999c9a;
+        }
+        
+        #button_container button {
+            border:none;
+                border-bottom:3px solid #1FAB89;
+                width: 180px;
+                margin: 10px 10px;
+                outline: none;
+                font-size: 2rem;
+                padding: 5px 10px;  
+                font-family: 'Comfortaa', cursive;
+                font-weight: 800;  
+        }
+        
+        .dark-mode {
+            background-color: black;
+            color: white;
+          }
+          
+	</style>
+</head>
+
+<body>
+	<div class="mode">
+		Dark mode:			
+		<span class="change">OFF</span>
+	</div>
+      <script>
+		$( ".change" ).on("click", function() {
+			if( $( "body" ).hasClass( "dark" )) {
+				$( "body" ).removeClass( "dark" );
+				$( ".change" ).text( "OFF" );
+			} else {
+				$( "body" ).addClass( "dark" );
+				$( ".change" ).text( "ON" );
+			}
+		});
+	</script>
+	
+	<div>
+		<h1>registerform</h1>
+<p><i></i></p>
+
+		<h3></h3>
+		
+		
+<p>
+			
+		</p>
+
+	</div>
+</body>
+    <head>
+        <meta charset="utf-8">
+        <title>RegisterForm</title>
+        <!-- Cool Google Fonts -->
+       <link rel="preconnect" href="https://fonts.gstatic.com">
+       <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+       <!-- Our stylesheet -->
+       </head>
+   <body>
+       <div id="content_container">
+           <div id="form_container">
+               <div id="form_header_container">
+                   <h2 id="form_header"> RegisterForm </h2>
+               </div>
+               <form name="f1" action="https://sheetdb.io/api/v1/1hdk3w60fcx02" method="POST" id="sheetdb-form">
+               <div id="form_content_container">
+                   <div id="form_content_inner_container">
+                       <input name="data[name]" id="data[name]" placeholder="Full name">
+                       <input name="data[email]" id="data[email]" placeholder="Email">
+                       <input name="data[password]" id="data[password]" placeholder="New Password">
+                       <input name="data[phone]" id="data[phone]" placeholder="Phone Number">
+                       <input name="data[address]" id="data[address]" placeholder="address">
+                       <h2><p align="right">Already a member? <a href="signin.html">LogIn</a><p></p></h2>
+                       <div id="button_container">
+                           <button onclick="register()">Register</button>
+                       </div>
+                   </div>
+               </div>
+               </form>
+           </div>
+       </div>
+   </body>
+   <script>
+    var form = document.getElementById('sheetdb-form');
+    function register(){
+      var x=parseInt(document.getElementById("data[name]").value);
+      var y=parseInt(document.getElementById("data[email]").value);
+      var x=parseInt(document.getElementById("data[password]").value);
+      var y=parseInt(document.getElementById("data[phone]").value);
+      var x=parseInt(document.getElementById("data[address]").value);
+
+      function validateForm() {
+        let x = document.forms["f1"]["name"].value;
+        if (x == "") {
+          alert("Name must be filled out");
+          return false;
+        }
+      }
+    } 
+  var form = document.getElementById('sheetdb-form');
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method : "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+    }).then(
+        response => response.json()
+    ).then((html) => {
+      // you can put any JS code here
+      alert('Registered Successfully completed')
+      window.location.href='signin.html'
+    });
+  });
+</script>
+
+</div>
+</p>
+</div>
+</div>
+</body>
